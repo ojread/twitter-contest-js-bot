@@ -157,7 +157,7 @@ class ContestJSBot {
                         API.like(searchItem.id_str).then(() =>
                             console.log('[Liked tweet #]', searchItem.id));
                     }
-text.indexOf('favourite') > -1 || text.indexOf('favorite') > -1 ||
+
                     // Check if we should Follow the user
                     if (text.indexOf('follow') > -1) {
                         API.follow(searchItem.user.id_str).then(() =>
