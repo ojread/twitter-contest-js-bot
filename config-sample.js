@@ -1,12 +1,11 @@
 const config = {
 
     // These are your twitter developer authentication details. Get them at https://apps.twitter.com/
-    // Load them from environment vars - don't want to check these into git.
     auth: {
-        consumer_key: process.env.TWITTER_CONSUMER_KEY,
-        consumer_secret: process.env.TWITTER_CONSUMER_SECRET,
-        token: process.env.TWITTER_ACCESS_TOKEN,
-        token_secret: process.env.TWITTER_ACCESS_TOKEN_SECRET
+        consumer_key: '',
+        consumer_secret: '',
+        token: '',
+        token_secret: ''
     },
 
     // The searches the bot will do

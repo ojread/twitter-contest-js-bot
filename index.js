@@ -140,6 +140,8 @@ class ContestJSBot {
      * If it finds necessary it also likes (favorites) it and follows the user.
      */
     worker() {
+      
+      console.log(this.last_tweet_id);
 
         // Check if we have elements in the Result Array
         if (this.searchResultsArr.length) {
