@@ -43,7 +43,7 @@ class ContestJSBot {
             let text = config.SEARCH_QUERIES[index] + config.SEARCH_QUERY_FILTERS;
 
             // Append preferred accounts if it's the case
-            if (config.PREFERRED_ACCOUNTS) {
+            if (config.PREFERRED_ACCOUNTS.length) {
                 text += ` from:${config.PREFERRED_ACCOUNTS.join(' OR from:')}`;
             }
 
@@ -140,9 +140,6 @@ class ContestJSBot {
      * If it finds necessary it also likes (favorites) it and follows the user.
      */
     worker() {
-      
-      console.log(this.last_tweet_id);
-
         // Check if we have elements in the Result Array
         if (this.searchResultsArr.length) {
             // Pop the first element (by doing a shift() operation)
@@ -160,7 +157,7 @@ class ContestJSBot {
                         API.like(searchItem.id_str).then(() =>
                             console.log('[Liked tweet #]', searchItem.id));
                     }
-
+text.indexOf('favourite') > -1 || text.indexOf('favorite') > -1 ||
                     // Check if we should Follow the user
                     if (text.indexOf('follow') > -1) {
                         API.follow(searchItem.user.id_str).then(() =>
